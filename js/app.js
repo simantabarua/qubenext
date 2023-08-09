@@ -73,10 +73,11 @@ function updateBannerContent() {
   setTimeout(() => {
     bannerTextElement.classList.add("fade-animation");
     bannerImgElement.classList.add("fade-animation");
-  }, 10);
+  }, 100);
 
 }
 
+//slide control 
 prevButton.addEventListener("click", () => {
   currentBannerIndex =
     (currentBannerIndex - 1 + banners.length) % banners.length;
@@ -101,3 +102,16 @@ function startAutoChangeInterval() {
 }
 updateBannerContent();
 startAutoChangeInterval();
+
+
+const openModalBtn = document.getElementById('openModalBtn');
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+openModalBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});

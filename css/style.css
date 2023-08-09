@@ -3,13 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-image: url('https://i.ibb.co/BfF2rkh/bg.png') !important;
+  background-image: url("https://i.ibb.co/BfF2rkh/bg.png") !important;
   background-position: center center;
   background-size: cover;
 }
 
 .card {
- 
   border-radius: 10px;
   border: 1px solid #fff;
   background: rgba(228, 228, 228, 0.2);
@@ -30,4 +29,25 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+#modal{
+  background: linear-gradient(129deg, #BDD3FF 0%, #FFF 100%);
+box-shadow: -2px -2px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link li {
+  width: 270px;
+  height: 110px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: rgba(131, 131, 131, 0.2);
+  backdrop-filter: blur(85px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
 }
