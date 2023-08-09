@@ -53,6 +53,9 @@ const banners = [
   },
 ];
 
+
+
+
 const bannerTextElement = document.getElementById("banner-text");
 const bannerImgElement = document.getElementById("banner-img");
 const prevButton = document.getElementById("prev-button");
@@ -62,15 +65,23 @@ let currentBannerIndex = 0;
 
 // update banner content
 function updateBannerContent() {
+  bannerTextElement.classList.remove("fade-animation");
+  bannerImgElement.classList.remove("fade-animation");
   const banner = banners[currentBannerIndex];
   bannerTextElement.innerHTML = banner.text;
   bannerImgElement.src = banner.imgSrc;
+  setTimeout(() => {
+    bannerTextElement.classList.add("fade-animation");
+    bannerImgElement.classList.add("fade-animation");
+  }, 1);
+
 }
 
 prevButton.addEventListener("click", () => {
   currentBannerIndex =
     (currentBannerIndex - 1 + banners.length) % banners.length;
   updateBannerContent();
+
 });
 
 nextButton.addEventListener("click", () => {
@@ -78,13 +89,14 @@ nextButton.addEventListener("click", () => {
   updateBannerContent();
 });
 
-const interval = 3000; 
+const interval = 5000; 
 
 function showNextBanner() {
     currentBannerIndex = (currentBannerIndex + 1) % banners.length;
     updateBannerContent();
 }
 function startAutoChangeInterval() {
+
     setInterval(showNextBanner, interval);
 }
 updateBannerContent();
