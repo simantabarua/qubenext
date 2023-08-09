@@ -33,7 +33,7 @@
         <div class="col-span-8 order-last md:order-first">
           <h2
             id="banner-text"
-            class="text-[#242424] text-xl text-center md:text-left md:text-5xl font-roboto banner-text leading-9 md:leading-[80px] fade-animation"
+            class="text-[#242424] text-xl text-center md:text-left md:text-5xl font-roboto banner-text leading-9 md:leading-[80px] fade-animation transition-all duration-200"
           >
             Building Tailored <span class="font-bold">Software</span> Solutions
             that Empower Your <span class="font-bold">Business</span>
@@ -110,7 +110,7 @@
 
     <!-- Modal  -->
 
-    <aside id="modal" class="w-[620px] absolute top-0 right-0 hidden">
+    <aside id="modal" class="w-[620px] absolute top-0 right-0 hidden transition-all duration-300 delay-300">
       <button
         class="p-2 m-2 h-14 w-14 flex justify-center items-center text-2xl absolute top-0 left-0 bg-slate-50 rounded-2xl duration-200 z-[1000]"
         id="closeModalBtn"
@@ -120,7 +120,7 @@
       <div class="my-20 mx-8 flex flex-col gap-6">
         <div>
           <ul
-            class="nav-link grid grid-cols-2 gap-2 items-center h-56 text-white"
+            class="nav-link grid grid-cols-1 md:grid-cols-2 gap-2 items-center place-items-center h-full md:h-56 text-white"
           >
             <li>Home</li>
             <li>Services</li>
@@ -129,7 +129,7 @@
           </ul>
         </div>
 
-        <p class="text-gray-700 text-base">
+        <p class="text-gray-700 text-base ">
           QubeNext is a new software company that specializes in design and
           developing innovative software solutions for businesses of all sizes.
           The company is committed to delivering high-quality, scalable, and
@@ -150,7 +150,7 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center mt-7">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center mt-7 place-items-center">
           <div>
             <h4 class="text-4xl font-semibold my-3">Get in touch</h4>
             <div class="flex gap-8">
@@ -160,7 +160,7 @@
             </div>
           </div>
 
-          <img src="./assets/qr.png" alt="" />
+          <img class="mt-4" src="./assets/qr.png" alt="" />
         </div>
       </div>
     </aside>
