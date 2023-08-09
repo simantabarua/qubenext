@@ -73,7 +73,7 @@ function updateBannerContent() {
   setTimeout(() => {
     bannerTextElement.classList.add("fade-animation");
     bannerImgElement.classList.add("fade-animation");
-  }, 1);
+  }, 10);
 
 }
 
