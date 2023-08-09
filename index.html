@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./input.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="h-screen mx-48 flex flex-col justify-between">
+      <nav class="flex justify-between items-center">
+        <a href="#"
+          ><img class="mt-20" src="./assets/logo.svg" alt="qube-next-logo"
+        /></a>
+        <button><img src="./assets/bar.svg" alt="" /></button>
+      </nav>
+
+      <div
+        class="grid grid-cols-12 h-full font-roboto font-thin place-items-center"
+      >
+        <div class="col-span-9">
+          <h2
+            class="text-[#242424] text-5xl font-roboto banner-text leading-[80px]"
+          >
+            Building Tailored <span class="font-bold">Software</span> Solutions
+            that Empower Your <span class="font-bold">Business</span>
+          </h2>
+          <div class="flex my-4 gap-7">
+            <button class="bg-white px-11 py-4 rounded flex gap-1 font-light">
+              Get in touch <img src="./assets/arrow-up.svg" alt="" />
+            </button>
+            <div class="flex gap-[30px]">
+              <a href="#"><img src="./assets/facebook.svg" alt="" /></a>
+              <a href="#"><img src="./assets/linkedin.svg" alt="" /></a>
+              <a href="#"><img src="./assets/git.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-3">
+          <img src="./assets/banner-img.svg" alt="" width="680" height="500" />
+        </div>
+      </div>
+
+      <!-- Banner footer  -->
+      <div class="flex justify-between items-center font-roboto">
+        <div class="flex gap-6">
+          <div class="card flex items-center justify-center flex-col">
+            <h5 class="text-4xl font-bold text-[#2563EB]">200+</h5>
+            <p class="text-2xl font-light">Active Members</p>
+          </div>
+          <div class="card flex items-center justify-center flex-col">
+            <h5 class="text-4xl font-bold text-[#2563EB]">80+</h5>
+            <p class="text-2xl font-light">Global Companies</p>
+          </div>
+          <div class="card flex items-center justify-center flex-col">
+            <h5 class="text-4xl font-bold text-[#2563EB]">90%</h5>
+            <p class="text-2xl font-light">Hiring response rate</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <button class="bg-white py-2 px-6 rounded-md flex gap-1">
+            <img src="./assets/arrow-left.svg" alt="" /> Previous
+          </button>
+          <button class="bg-white py-2 px-6 rounded-md flex gap-1">
+            Next <img src="./assets/arrow-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto py-8 px-4"></main>
+  </body>
+</html>
