@@ -14,8 +14,8 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="h-screen mx-12 md:mx-48 flex flex-col justify-between">
+  <body class="home">
+    <header class="h-full mx-12 md:mx-48 flex flex-col justify-between">
       <nav class="flex justify-between items-center gap-4">
         <a href="#"
           ><img
@@ -23,7 +23,11 @@
             src="./assets/logo.svg"
             alt="qube-next-logo"
         /></a>
-        <button id="openModalBtn"><img src="./assets/bar.svg" alt="" /></button>
+        <button id="openModalBtn" class="button h-16 w-20">
+          <div class="line line-1 "></div>
+          <div class="line line-2 "></div>
+          <div class="line line-3 "></div>
+        </button>
       </nav>
 
       <!-- Banner start -->
@@ -65,7 +69,7 @@
 
       <!-- Banner footer  -->
       <div
-        class="flex justify-center md:justify-between flex-col md:flex-row items-center font-roboto mb-5"
+        class="flex justify-center md:justify-between flex-col md:flex-row items-center font-roboto md:pb-36"
       >
         <div
           class="flex gap-4 items-center justify-center flex-col md:flex-row"
@@ -110,12 +114,19 @@
 
     <!-- Modal  -->
 
-    <aside id="modal" class="w-[620px] absolute top-0 right-0 hidden transition-all duration-300 delay-300">
+    <aside
+      id="modal"
+      class="w-[620px] absolute top-0 right-0 hidden transition-all duration-300 delay-300"
+    >
       <button
-        class="p-2 m-2 h-14 w-14 flex justify-center items-center text-2xl absolute top-0 left-0 bg-slate-50 rounded-2xl duration-200 z-[1000]"
+        class="p-2 m-2 h-14 w-14 flex justify-center items-center text-2xl absolute top-0 left-0 rounded-2xl duration-200 z-[1000]"
         id="closeModalBtn"
       >
-        X
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+      class="w-10 h-10 font-bold text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      
       </button>
       <div class="my-20 mx-8 flex flex-col gap-6">
         <div>
@@ -123,13 +134,13 @@
             class="nav-link grid grid-cols-1 md:grid-cols-2 gap-2 items-center place-items-center h-full md:h-56 text-white"
           >
             <li>Home</li>
-            <li>Services</li>
-            <li>Services</li>
+            <a href="./pages/services.html"> <li>Services</li></a>
+            <li>Contact</li>
             <li>Our Team</li>
           </ul>
         </div>
 
-        <p class="text-gray-700 text-base ">
+        <p class="text-gray-700 text-base">
           QubeNext is a new software company that specializes in design and
           developing innovative software solutions for businesses of all sizes.
           The company is committed to delivering high-quality, scalable, and
@@ -150,7 +161,9 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center mt-7 place-items-center">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 items-center mt-7 place-items-center"
+        >
           <div>
             <h4 class="text-4xl font-semibold my-3">Get in touch</h4>
             <div class="flex gap-8">
