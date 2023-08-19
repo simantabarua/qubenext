@@ -56,51 +56,75 @@ const banners = [
 
 
 
+
 const bannerTextElement = document.getElementById("banner-text");
 const bannerImgElement = document.getElementById("banner-img");
-const prevButton = document.getElementById("prev-button");
-const nextButton = document.getElementById("next-button");
-
 let currentBannerIndex = 0;
 
-// update banner content
+// Assuming you have defined the banners array
+
 function updateBannerContent() {
-  bannerTextElement.classList.remove("fade-animation");
-  bannerImgElement.classList.remove("fade-animation");
+  bannerTextElement.classList.remove("active");
+  bannerImgElement.classList.remove("active");
+
   const banner = banners[currentBannerIndex];
   bannerTextElement.innerHTML = banner.text;
   bannerImgElement.src = banner.imgSrc;
-  setTimeout(() => {
-    bannerTextElement.classList.add("fade-animation");
-    bannerImgElement.classList.add("fade-animation");
-  }, 100);
 
+  // Add the active class after a small delay to trigger the fade-in transition
+  setTimeout(() => {
+    bannerTextElement.classList.add("active");
+    bannerImgElement.classList.add("active");
+  }, 100);
 }
 
+bannerTextElement.addEventListener("animationend", () => {
+  bannerTextElement.classList.remove("fade-animation-text");
+  setTimeout(() => {
+    bannerTextElement.classList.add("fade-animation-text");
+  }, 0);
+});
 
+bannerImgElement.addEventListener("animationend", () => {
+  bannerImgElement.classList.remove("fade-animation-img");
+  setTimeout(() => {
+    bannerImgElement.classList.add("fade-animation-img");
+  }, 0);
+});
 
-const interval = 5000; 
+updateBannerContent();
+
+const interval = 5000;
 
 function showNextBanner() {
-    currentBannerIndex = (currentBannerIndex + 1) % banners.length;
-    updateBannerContent();
+  currentBannerIndex = (currentBannerIndex + 1) % banners.length;
+  updateBannerContent();
 }
-function startAutoChangeInterval() {
 
-    setInterval(showNextBanner, interval);
+function startAutoChangeInterval() {
+  setInterval(showNextBanner, interval);
 }
-updateBannerContent();
+
 startAutoChangeInterval();
 
 
-const openModalBtn = document.getElementById('openModalBtn');
-const modal = document.getElementById('modal');
-const closeModalBtn = document.getElementById('closeModalBtn');
 
-openModalBtn.addEventListener('click', () => {
-  modal.style.display = 'flex';
+
+// code for modal
+
+
+// open the modal and show the overlay
+document.getElementById("openModalBtn").addEventListener("click", function () {
+  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("overlay").classList.remove("hidden");
 });
 
-closeModalBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
+// close the modal and hide the overlay
+document.getElementById("closeModalBtn").addEventListener("click", function () {
+  document.getElementById("modal").classList.add("closing");
+  setTimeout(function () {
+    document.getElementById("modal").classList.add("hidden");
+    document.getElementById("modal").classList.remove("closing");
+  }, 300); 
+  document.getElementById("overlay").classList.add("hidden");
 });
