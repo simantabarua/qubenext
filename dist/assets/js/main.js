@@ -1,55 +1,55 @@
 const banners = [
   {
     text: 'Crafting Intuitive <span class="font-bold">Interfaces</span> that Engage and <span class="font-bold">Delight</span> Users.',
-    imgSrc: "./assets/banner/banner-1.svg",
+    imgSrc: "./assets/imgs/banner/banner-1.svg",
   },
   {
     text: 'Building Tailored <span class="font-bold">Software</span> Solutions that Empower Your <span class="font-bold">Business</span>',
-    imgSrc: "./assets/banner/banner-2.svg",
+    imgSrc: "./assets/imgs/banner/banner-2.svg",
   },
   {
     text: 'Guiding Your <span class="font-bold">Product</span> Journey From Idea to <span class="font-bold">Market</span> Success.',
-    imgSrc: "./assets/banner/banner-3.svg",
+    imgSrc: "./assets/imgs/banner/banner-3.svg",
   },
   {
     text: 'Creating Compelling <span class="font-bold">Visuals</span> that Tell <span class="font-bold">Brand’s</span> Story',
-    imgSrc: "./assets/banner/banner-4.svg",
+    imgSrc: "./assets/imgs/banner/banner-4.svg",
   },
   {
     text: '<span class="font-bold">Transforming</span> Your Online Presence With Stunning <span class="font-bold">Web Design</span>',
-    imgSrc: "./assets/banner/banner-5.svg",
+    imgSrc: "./assets/imgs/banner/banner-5.svg",
   },
   {
     text: 'Crafting Intuitive <span class="font-bold">Interfaces</span> that Engage and <span class="font-bold">Delight</span> Users.',
-    imgSrc: "./assets/banner/banner-6.svg",
+    imgSrc: "./assets/imgs/banner/banner-6.svg",
   },
   {
     text: 'Building Tailored <span class="font-bold">Software</span> Solutions that Empower Your <span class="font-bold">Business</span>',
-    imgSrc: "./assets/banner/banner-7.svg",
+    imgSrc: "./assets/imgs/banner/banner-7.svg",
   },
   {
     text: 'Guiding Your <span class="font-bold">Product</span> Journey From Idea to <span class="font-bold">Market</span> Success.',
-    imgSrc: "./assets/banner/banner-8.svg",
+    imgSrc: "./assets/imgs/banner/banner-8.svg",
   },
   {
     text: 'Creating Compelling <span class="font-bold">Visuals</span> that Tell <span class="font-bold">Brand’s</span> Story',
-    imgSrc: "./assets/banner/banner-9.svg",
+    imgSrc: "./assets/imgs/banner/banner-9.svg",
   },
   {
     text: '<span class="font-bold">Transforming</span> Your Online Presence With Stunning <span class="font-bold">Web Design</span>',
-    imgSrc: "./assets/banner/banner-10.svg",
+    imgSrc: "./assets/imgs/banner/banner-10.svg",
   },
   {
     text: '<span class="font-bold">Bringing</span> Your Ideas to Life With Seamless and Captivating <span class="font-bold">Apps</span>.',
-    imgSrc: "./assets/banner/banner-11.svg",
+    imgSrc: "./assets/imgs/banner/banner-11.svg",
   },
   {
     text: 'Building Tailored <span class="font-bold">Software</span> Solutions that Empower Your <span class="font-bold">Business</span>',
-    imgSrc: "./assets/banner/banner-12.svg",
+    imgSrc: "./assets/imgs/banner/banner-12.svg",
   },
   {
     text: 'Creating Compelling <span class="font-bold">Visuals</span> that Tell <span class="font-bold">Brand’s</span> Story',
-    imgSrc: "./assets/banner/banner-13.svg",
+    imgSrc: "./assets/imgs/banner/banner-13.svg",
   },
 ];
 
@@ -77,18 +77,7 @@ function updateBannerContent() {
 
 }
 
-//slide control 
-prevButton.addEventListener("click", () => {
-  currentBannerIndex =
-    (currentBannerIndex - 1 + banners.length) % banners.length;
-  updateBannerContent();
 
-});
-
-nextButton.addEventListener("click", () => {
-  currentBannerIndex = (currentBannerIndex + 1) % banners.length;
-  updateBannerContent();
-});
 
 const interval = 5000; 
 
