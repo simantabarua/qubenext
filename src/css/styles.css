@@ -81,7 +81,7 @@
 
 
 .banner-text {
-  @apply  text-center font-roboto text-xl leading-9 text-[#242424] transition-all duration-200 md:text-left md:text-2xl md:leading-[80px] lg:text-3xl xl:text-4xl xxl:text-5xl;
+  @apply  text-center font-roboto text-xl leading-9 text-[#242424] transition-all duration-200 md:text-left md:text-2xl md:leading-[80px] lg:text-3xl xl:text-4xl 2xl:text-5xl;
 }
 #modal {
   background: linear-gradient(129deg, #bdd3ff 0%, #fff 100%);
@@ -239,7 +239,7 @@
 }
 
 .btn-circle {
-  @apply mx-auto my-2 flex items-center justify-center rounded-full xxl:my-6;
+  @apply mx-auto my-2 flex items-center justify-center rounded-full 2xl:my-6;
   border: 2px solid #fff;
   background: rgba(236, 236, 236, 0.2);
   backdrop-filter: blur(27.5px);
@@ -259,5 +259,8 @@
 }
 
 .team-card{
- 
+  border-radius: 20px;
+  background: linear-gradient(325deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.10) 100%);
+  box-shadow: 0px 4px 24px -1px rgba(140, 140, 140, 0.20);
+  backdrop-filter: blur(20px);
 }
