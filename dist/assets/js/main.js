@@ -53,65 +53,36 @@ const banners = [
   },
 ];
 
-
-
-
-
 const bannerTextElement = document.getElementById("banner-text");
 const bannerImgElement = document.getElementById("banner-img");
 let currentBannerIndex = 0;
 
-// Assuming you have defined the banners array
 
 function updateBannerContent() {
-  bannerTextElement.classList.remove("active");
-  bannerImgElement.classList.remove("active");
-
+  bannerTextElement.classList.add("text-animation-in");
+  bannerImgElement.classList.add("img-animation-in");
   const banner = banners[currentBannerIndex];
   bannerTextElement.innerHTML = banner.text;
   bannerImgElement.src = banner.imgSrc;
 
-  // Add the active class after a small delay to trigger the fade-in transition
   setTimeout(() => {
-    bannerTextElement.classList.add("active");
-    bannerImgElement.classList.add("active");
-  }, 100);
+    bannerTextElement.classList.remove("text-animation-in");
+    bannerImgElement.classList.remove("img-animation-in");
+  }, 1000);
 }
 
-bannerTextElement.addEventListener("animationend", () => {
-  bannerTextElement.classList.remove("fade-animation-text");
-  setTimeout(() => {
-    bannerTextElement.classList.add("fade-animation-text");
-  }, 0);
-});
-
-bannerImgElement.addEventListener("animationend", () => {
-  bannerImgElement.classList.remove("fade-animation-img");
-  setTimeout(() => {
-    bannerImgElement.classList.add("fade-animation-img");
-  }, 0);
-});
-
-updateBannerContent();
-
 const interval = 5000;
-
 function showNextBanner() {
   currentBannerIndex = (currentBannerIndex + 1) % banners.length;
   updateBannerContent();
 }
-
 function startAutoChangeInterval() {
   setInterval(showNextBanner, interval);
 }
 
 startAutoChangeInterval();
 
-
-
-
 // code for modal
-
 
 // open the modal and show the overlay
 document.getElementById("openModalBtn").addEventListener("click", function () {
@@ -125,6 +96,6 @@ document.getElementById("closeModalBtn").addEventListener("click", function () {
   setTimeout(function () {
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("modal").classList.remove("closing");
-  }, 300); 
+  }, 300);
   document.getElementById("overlay").classList.add("hidden");
 });
